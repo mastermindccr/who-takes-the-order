@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express();
-const cors = require('cors')
+const cors = require('cors');
+const path = require('path');
 const pwd = require('./router/pwd.js');
 const person = require('./router/person');
 require('dotenv').config();
