@@ -3,11 +3,6 @@ const fs = require('fs');
 const path = require('path')
 const router = app.Router();
 
-const init = require('../init.json');
-fs.writeFileSync(path.join(__dirname, '../person.json'), JSON.stringify(init), (err) => {
-    if(err) console.error(err);
-})
-
 router.get('/', (req, res) => {
     var obj = require('../person.json');
     let arr = [];
