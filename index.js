@@ -11,8 +11,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use('/pwd', pwd);
 app.use('/person', person);
 
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+app.get('/:path', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', req.params.path));
 });
 
 app.use(function (req, res){
