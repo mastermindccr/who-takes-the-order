@@ -3,7 +3,6 @@ const app = express();
 const path = require('path');
 const pwd = require('./router/pwd.js');
 const person = require('./router/person');
-require('dotenv').config();
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
