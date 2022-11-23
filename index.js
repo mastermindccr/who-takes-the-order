@@ -19,6 +19,6 @@ app.use(function (req, res){
     res.status(404).end('404 Page Not Found');
 });
 
-app.listen(process.env.PORT | 5000, ()=>{
+app.listen(process.env.PORT || 5000, ()=>{
     console.log('app is ready!')
 })
